@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nyttårsbord nAre Scott 2027</title>
+  <meta name="description" content="Lørdag 16. januar 2027 på Nidelven klubbhus. Påmeldingsfrist 16. desember 2026.">
+  <meta name="theme-color" content="#a3162b">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Familjen+Grotesk:wght@400;600&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="snow" aria-hidden="true"></canvas>
+
+  <main>
+    <!-- 1. INVITASJON -->
+    <header class="hero">
+      <div class="hero-text">
+        <h1>Nyttårsbord <span>nAre Scott 2027</span></h1>
+
+        <div class="hero-details">
+          <div>
+            <!-- Når klokkeslettet er klart: bytt ut siste setning med for eksempel "Vi starter klokka 18." -->
+            <p class="invitation">Du er invitert lørdag 16. januar 2027 på Nidelven klubbhus, Tempeveien 13B. Klokkeslettet kommer.</p>
+            <p class="tagline">Julen er over. Festen er ikke det.</p>
+          </div>
+
+          <div class="hero-action">
+            <div class="countdown" role="timer">
+              <div class="countdown-numbers" id="countdown-numbers">
+                <div><strong id="days">–</strong><span>dager</span></div>
+                <div><strong id="hours">–</strong><span>timer</span></div>
+                <div><strong id="minutes">–</strong><span>min</span></div>
+                <div><strong id="seconds">–</strong><span>sek</span></div>
+              </div>
+              <p class="countdown-message" id="countdown-message" hidden></p>
+            </div>
+
+            <a class="button" href="#pamelding">Meld deg på</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bybildet og strikkeborden tegnes av script.js -->
+      <svg class="scene" id="scene" viewBox="0 0 1440 300" preserveAspectRatio="xMidYMax slice" aria-hidden="true"></svg>
+      <svg class="knit" id="knit" aria-hidden="true"></svg>
+    </header>
+
+    <div class="content">
+      <!-- 2. DAGSPLAN
+           Når programmet er klart: bytt ut <li>-en under med én slik per punkt:
+           <li><time>19:00</time><h3>Middag</h3></li> -->
+      <section class="block">
+        <h2>Dagsplan</h2>
+        <ol class="timeline">
+          <li>
+            <time>TBA</time>
+            <h3>Programmet kommer</h3>
+            <p>Det eneste som er bestemt, er at det blir bra.</p>
+          </li>
+        </ol>
+      </section>
+
+      <!-- 3. PRAKTISK INFO -->
+      <section class="block">
+        <h2>Praktisk info</h2>
+        <dl class="info">
+          <div><dt>Pris</dt><dd>TBA</dd></div>
+          <div><dt>Inkludert</dt><dd>TBA</dd></div>
+          <div><dt>Antrekk</dt><dd>Pent: dress med slips</dd></div>
+          <div><dt>Påmeldingsfrist</dt><dd>16. desember 2026</dd></div>
+        </dl>
+      </section>
+    </div>
+
+    <!-- 4. PÅMELDING -->
+    <section class="signup" id="pamelding">
+      <div class="signup-inner">
+        <h2>Blir du med?</h2>
+        <div>
+          <p>Meld deg på innen 16. desember 2026.</p>
+          <a class="button" href="https://forms.gle/k4D4dEbJkSpjEcZP7" target="_blank" rel="noopener">Til påmeldingsskjemaet</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 5. KONTAKT -->
+  <footer>
+    <p>Spørsmål? Send en melding til Martin.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
