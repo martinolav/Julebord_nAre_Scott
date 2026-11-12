@@ -12,6 +12,10 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Videoen går på repeat bak forsiden, farget rød så teksten er lett å lese -->
+  <div class="bg-video" aria-hidden="true">
+    <video id="bg-video" src="media/fest.mp4" autoplay muted loop playsinline preload="auto"></video>
+  </div>
   <canvas id="snow" aria-hidden="true"></canvas>
 
   <main>
@@ -63,6 +67,9 @@
         </ol>
       </section>
 
+      <!-- Bildene ligger strødd langs siden. På mobil havner de mellom seksjonene. -->
+      <img class="snap snap-1" src="media/gjengen.jpg" width="1500" height="2000" loading="lazy" alt="Gjengen i dress rundt et langbord i sola, med pils og norske flagg.">
+
       <!-- 3. PRAKTISK INFO -->
       <section class="block">
         <h2>Praktisk info</h2>
@@ -73,6 +80,8 @@
           <div><dt>Påmeldingsfrist</dt><dd>16. desember 2026</dd></div>
         </dl>
       </section>
+      <img class="snap snap-2" src="media/selfie.jpg" width="1125" height="2000" loading="lazy" alt="To stykker tar en selfie på dansegulvet, den ene roper med åpen munn.">
+      <img class="snap snap-3" src="media/se-bak-martin.jpg" width="1125" height="2000" loading="lazy" alt="Martin ved et bord fullt av øl og vin. Teksten på bildet sier «Se bak Martin».">
     </div>
 
     <!-- 4. PÅMELDING -->

@@ -297,6 +297,31 @@ function drawSnow() {
   requestAnimationFrame(drawSnow);
 }
 
+// Bakgrunnsvideoen står stille for dem som har skrudd av animasjoner
+if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  const video = document.getElementById("bg-video");
+  video.removeAttribute("autoplay");
+  video.pause();
+}
+
+// Bildene glir inn og vris på plass når man blar ned til dem
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches && "IntersectionObserver" in window) {
+  const observer = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      if (entry.isIntersecting) {
+        entry.target.classList.remove("waiting");
+        observer.unobserve(entry.target);
+      }
+    }
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll(".snap").forEach((photo, i) => {
+    photo.classList.add("waiting");
+    photo.style.transitionDelay = `${i * 0.12}s`;
+    observer.observe(photo);
+  });
+}
+
 if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
   // På mobil endres vindushøyden når adressefeltet skjules, så vi tegner bare opp på nytt når bredden endres.
   let lastWidth = window.innerWidth;
