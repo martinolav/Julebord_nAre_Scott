@@ -154,6 +154,8 @@ h2 { font-size: clamp(2.1rem, 4.5vw, 3.25rem); line-height: 1.05; }
 .timeline time { grid-row: span 2; color: var(--window); font-weight: 600; font-variant-numeric: tabular-nums; }
 .timeline h3 { font-size: 1.5rem; line-height: 1.2; }
 .timeline p { grid-column: 2; margin-top: 0.25rem; color: var(--muted); }
+.timeline a { color: var(--window); text-underline-offset: 0.2em; }
+.timeline a:hover { text-decoration-thickness: 2px; }
 
 /* Praktisk info */
 .info { margin: 0; }
